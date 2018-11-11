@@ -1,0 +1,15 @@
+public enum NameService {
+    MALE_HAIRCUT,
+    FEMALE_HAIRCUT,
+    DYEING,
+    PEELING,
+    CLEANING,
+    LIFTING,
+    MANICURE,
+    PEDICURE,
+    DEPILATION,
+    MASSAGE,
+    HAND_EPILATION,
+    LEG_EPILATION;
+
+}
