@@ -13,4 +13,11 @@ public class ChoicePrice implements Predicate<Long> {
         return n >= min && n <= max;
     }
 
+    @Override
+    public String toString() {
+        return "ChoicePrice{" +
+                "min=" + min +
+                ", max=" + max +
+                '}';
+    }
 }

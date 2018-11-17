@@ -1,17 +1,17 @@
 import java.util.Comparator;
 
 public class Specialist implements Comparable<Specialist> {
-    private FullName fullName;
+    private String fullName;
     private Profession profession;
     private Rating rating = new Rating();
 
-    public Specialist(FullName fullName, Profession profession, Rating rating) {
+    public Specialist(String fullName, Profession profession, Rating rating) {
         this.fullName = fullName;
         this.profession = profession;
         this.rating = rating;
     }
 
-    public FullName getFullName() {
+    public String getFullName() {
         return fullName;
     }
 
@@ -31,11 +31,10 @@ public class Specialist implements Comparable<Specialist> {
         return getFullName().compareTo(specialist.getFullName());
     }
 
-
     @Override
     public String toString() {
         return "Specialist{" +
-                "fullName=" + fullName +
+                "fullName='" + fullName + '\'' +
                 ", profession=" + profession +
                 ", rating=" + rating +
                 '}';

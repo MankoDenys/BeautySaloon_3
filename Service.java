@@ -10,15 +10,15 @@ public class Service extends CategoryService{
     private long price;
     private LocalTime leadTime;
     private String description;
-    private Map<LocalDate, Schedule> dateToSchedule = new LinkedHashMap<>();
+//    private Map<LocalDate, Schedule> dateToSchedule = new LinkedHashMap<>();
 
-    public Service(GeneralNameService generalNameService, NameService nameService, long price, LocalTime leadTime, String description, Map<LocalDate, Schedule> dateToSchedule) {
+    public Service(GeneralNameService generalNameService, NameService nameService, long price, LocalTime leadTime, String description) {
         super(generalNameService);
         this.nameService = nameService;
         this.price = price;
         this.leadTime = leadTime;
         this.description = description;
-        this.dateToSchedule = dateToSchedule;
+
     }
 
     public NameService getNameService() {
@@ -37,13 +37,11 @@ public class Service extends CategoryService{
         return description;
     }
 
-    public Map<LocalDate, Schedule> getDateToSchedule() {
-        return dateToSchedule;
-    }
 
 //    public Schedule getScheduleForDate(LocalDate date) {
 //
 //    }
+
 
     @Override
     public String toString() {
@@ -52,7 +50,6 @@ public class Service extends CategoryService{
                 ", price=" + price +
                 ", leadTime=" + leadTime +
                 ", description='" + description + '\'' +
-                ", dateToSchedule=" + dateToSchedule +
-                '}';
+                "} " + super.toString();
     }
 }
